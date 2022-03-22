@@ -1,0 +1,16 @@
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\CoffeeAppGeneric.exe
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\CoffeeAppGeneric.deps.json
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\CoffeeAppGeneric.runtimeconfig.json
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\CoffeeAppGeneric.runtimeconfig.dev.json
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\CoffeeAppGeneric.dll
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\ref\CoffeeAppGeneric.dll
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\CoffeeAppGeneric.pdb
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.GeneratedMSBuildEditorConfig.editorconfig
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.AssemblyInfoInputs.cache
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.AssemblyInfo.cs
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.csproj.CoreCompileInputs.cache
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.dll
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\ref\CoffeeAppGeneric.dll
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.pdb
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.genruntimeconfig.cache
+C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.csproj.AssemblyReference.cache
