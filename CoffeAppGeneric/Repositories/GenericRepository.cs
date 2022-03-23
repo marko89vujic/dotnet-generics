@@ -9,7 +9,7 @@ namespace CoffeeAppGeneric.Repositories
 {
     public class GenericRepository<T>
     {
-        private readonly List<T> _items;
+        protected readonly List<T> _items;
 
         public GenericRepository()
         {
