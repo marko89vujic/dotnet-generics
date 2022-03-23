@@ -1,5 +1,7 @@
 ﻿
 using System;
+using CoffeeAppGeneric.Entities;
+using CoffeeAppGeneric.Repositories;
 
 namespace CoffeeAppGeneric
 {
@@ -7,9 +9,29 @@ namespace CoffeeAppGeneric
     {
         static void Main(string[] args)
         {
+            // First part of Tutorial (only implementation of Generic class SimpleStack<T>
             StackDoubles();
             StackStrings();
+            Console.WriteLine("========================================");
+            // Second part
+            PrintOrganizationAndEmployees();
             Console.ReadLine();
+        }
+
+        private static void PrintOrganizationAndEmployees()
+        {
+            var employees = new GenericRepository<Employee>();
+            employees.Add(new Employee { Id = 1, Name = "Marko"});
+            employees.Add(new Employee { Id = 2, Name = "Katarina" });
+            employees.Add(new Employee { Id = 3, Name = "Sofija" });
+
+            employees.Save();
+
+            var organizations = new GenericRepository<Organization>();
+            organizations.Add(new Organization{Id=1, Name = "enjoy.ing"});
+            organizations.Add(new Organization{Id = 2, Name = "ATT"});
+
+            organizations.Save();
         }
 
         private static void StackDoubles()
