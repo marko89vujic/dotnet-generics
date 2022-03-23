@@ -1,13 +1,11 @@
-﻿using System;
+﻿using CoffeeAppGeneric.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CoffeeAppGeneric.Entities;
 
 namespace CoffeeAppGeneric.Repositories
 {
-    public class GenericRepository<T, TKey> where T:EntityBase
+    public class ListRepository<T, TKey> where T:class, IEntityBase
     {
         protected readonly List<T> _items;
 
@@ -16,7 +14,7 @@ namespace CoffeeAppGeneric.Repositories
         /// </summary>
         public TKey? Key { get; set; }
 
-        public GenericRepository()
+        public ListRepository()
         {
             _items = new List<T>();
         }

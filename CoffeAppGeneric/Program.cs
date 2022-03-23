@@ -1,5 +1,6 @@
 ﻿
 using System;
+using CoffeeAppGeneric.Data;
 using CoffeeAppGeneric.Entities;
 using CoffeeAppGeneric.Repositories;
 
@@ -21,37 +22,47 @@ namespace CoffeeAppGeneric
 
         private static void PrintOrganizationAndEmployees()
         {
-            var employees = new GenericRepository<Employee,int>();
+            var employees = new SQLRepository<Employee>(new StorageAppDbContext());
             AddEmployees(employees);
 
             GetByIdExample(employees);
 
             employees.Save();
-
-            var organizations = new GenericRepository<Organization, int>();
+            WriteAllEmployees(employees);
+            var organizations = new SQLRepository<Organization>(new StorageAppDbContext());
             AddOrganizations(organizations);
 
             organizations.Save();
         }
 
-        private static void GetByIdExample(GenericRepository<Employee,int> _items)
+        private static void WriteAllEmployees(SQLRepository<Employee> employees)
+        {
+            var items = employees.GetAll();
+
+            foreach (var item in items)
+            {
+                Console.WriteLine($"Item: Id: {item.Id}, Name: {item.Name}");
+            }
+        }
+
+        private static void GetByIdExample(ISqlRepository<Employee> _items)
         {
             var employee = _items.GetById(1);
 
             Console.WriteLine($"Employee with id 1: {employee.Name}");
         }
 
-        private static void AddOrganizations(GenericRepository<Organization, int> organizations)
+        private static void AddOrganizations(ISqlRepository<Organization> organizations)
         {
-            organizations.Add(new Organization { Id = 1, Name = "enjoy.ing" });
-            organizations.Add(new Organization { Id = 2, Name = "ATT" });
+            organizations.Add(new Organization { Name = "enjoy.ing" });
+            organizations.Add(new Organization {  Name = "ATT" });
         }
 
-        private static void AddEmployees(GenericRepository<Employee, int> employees)
+        private static void AddEmployees(ISqlRepository<Employee> employees)
         {
-            employees.Add(new Employee { Id = 1, Name = "Marko" });
-            employees.Add(new Employee { Id = 2, Name = "Katarina" });
-            employees.Add(new Employee { Id = 3, Name = "Sofija" });
+            employees.Add(new Employee {  Name = "Marko" });
+            employees.Add(new Employee {  Name = "Katarina" });
+            employees.Add(new Employee {  Name = "Sofija" });
         }
 
         private static void StackDoubles()
