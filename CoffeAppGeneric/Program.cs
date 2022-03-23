@@ -16,7 +16,7 @@ namespace CoffeeAppGeneric
             Console.WriteLine("========================================");
             // Second part
             PrintOrganizationAndEmployees();
-            Console.WriteLine("=============================================");
+            
             Console.ReadLine();
         }
 
@@ -28,20 +28,22 @@ namespace CoffeeAppGeneric
             GetByIdExample(employees);
 
             employees.Save();
-            WriteAllEmployees(employees);
+            WriteAllToConsole(employees);
+            Console.WriteLine("=============================================");
             var organizations = new SQLRepository<Organization>(new StorageAppDbContext());
             AddOrganizations(organizations);
-
+            
             organizations.Save();
+            WriteAllToConsole(organizations);
         }
 
-        private static void WriteAllEmployees(SQLRepository<Employee> employees)
+        private static void WriteAllToConsole(ISqlReadRepository<EntityBase> repository)
         {
-            var items = employees.GetAll();
+            var items = repository.GetAll();
 
             foreach (var item in items)
             {
-                Console.WriteLine($"Item: Id: {item.Id}, Name: {item.Name}");
+                Console.WriteLine(item);
             }
         }
 
