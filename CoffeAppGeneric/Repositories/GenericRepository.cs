@@ -7,9 +7,14 @@ using CoffeeAppGeneric.Entities;
 
 namespace CoffeeAppGeneric.Repositories
 {
-    public class GenericRepository<T>
+    public class GenericRepository<T, TKey>
     {
         protected readonly List<T> _items;
+
+        /// <summary>
+        /// Example for using multiple type parameters for generic classes
+        /// </summary>
+        public TKey? Key { get; set; }
 
         public GenericRepository()
         {

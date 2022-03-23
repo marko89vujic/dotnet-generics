@@ -4,7 +4,7 @@
     /// inheritance from Generic class
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class GenericRepositoryWithRemove<T>:GenericRepository<T>
+    public class GenericRepositoryWithRemove<T, TKey>:GenericRepository<T, TKey>
     {
         public void Remove(T item)
         {

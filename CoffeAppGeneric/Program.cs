@@ -20,14 +20,14 @@ namespace CoffeeAppGeneric
 
         private static void PrintOrganizationAndEmployees()
         {
-            var employees = new GenericRepositoryWithRemove<Employee>();
+            var employees = new GenericRepository<Employee,int>();
             employees.Add(new Employee { Id = 1, Name = "Marko"});
             employees.Add(new Employee { Id = 2, Name = "Katarina" });
             employees.Add(new Employee { Id = 3, Name = "Sofija" });
 
             employees.Save();
 
-            var organizations = new GenericRepositoryWithRemove<Organization>();
+            var organizations = new GenericRepository<Organization, int>();
             organizations.Add(new Organization{Id=1, Name = "enjoy.ing"});
             organizations.Add(new Organization{Id = 2, Name = "ATT"});
 
