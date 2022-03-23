@@ -7,7 +7,7 @@ using CoffeeAppGeneric.Entities;
 
 namespace CoffeeAppGeneric.Repositories
 {
-    public class GenericRepository<T, TKey>
+    public class GenericRepository<T, TKey> where T:EntityBase
     {
         protected readonly List<T> _items;
 
@@ -32,6 +32,11 @@ namespace CoffeeAppGeneric.Repositories
             {
                 Console.WriteLine(item);
             }
+        }
+
+        public T GetById(int id)
+        {
+           return _items.Single(x => x.Id == id);
         }
     }
 }

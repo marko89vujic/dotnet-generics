@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CoffeeAppGeneric.Entities
 {
-    public class Organization
+    public class Organization: EntityBase
     {
-        public int Id { get; set; }
-
         public string? Name { get; set; }
 
         public override string ToString()

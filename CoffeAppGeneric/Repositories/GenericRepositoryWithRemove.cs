@@ -1,10 +1,12 @@
-﻿namespace CoffeeAppGeneric.Repositories
+﻿using CoffeeAppGeneric.Entities;
+
+namespace CoffeeAppGeneric.Repositories
 {
     /// <summary>
     /// inheritance from Generic class
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class GenericRepositoryWithRemove<T, TKey>:GenericRepository<T, TKey>
+    public class GenericRepositoryWithRemove<T, TKey>:GenericRepository<T, TKey> where T:EntityBase
     {
         public void Remove(T item)
         {
