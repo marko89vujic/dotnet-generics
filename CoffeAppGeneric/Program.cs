@@ -24,7 +24,7 @@ namespace CoffeeAppGeneric
         {
             var employees = new SQLRepository<Employee>(new StorageAppDbContext());
             AddEmployees(employees);
-
+            AddManager(employees);
             GetByIdExample(employees);
 
             employees.Save();
@@ -65,6 +65,11 @@ namespace CoffeeAppGeneric
             employees.Add(new Employee {  Name = "Marko" });
             employees.Add(new Employee {  Name = "Katarina" });
             employees.Add(new Employee {  Name = "Sofija" });
+        }
+
+        private static void AddManager(ISqlWriteRepository<Manager> managers)
+        {
+            managers.Add(new Manager { Name = "Styv" });
         }
 
         private static void StackDoubles()
