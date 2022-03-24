@@ -16,7 +16,7 @@ namespace CoffeeAppGeneric
             Console.WriteLine("========================================");
             // Second part
             PrintOrganizationAndEmployees();
-            
+
             Console.ReadLine();
         }
 
@@ -32,7 +32,7 @@ namespace CoffeeAppGeneric
             Console.WriteLine("=============================================");
             var organizations = new SQLRepository<Organization>(new StorageAppDbContext());
             AddOrganizations(organizations);
-            
+
             organizations.Save();
             WriteAllToConsole(organizations);
         }
@@ -54,18 +54,42 @@ namespace CoffeeAppGeneric
             Console.WriteLine($"Employee with id 1: {employee.Name}");
         }
 
-        private static void AddOrganizations(ISqlRepository<Organization> organizations)
+        private static void AddOrganizations(ISqlRepository<Organization> organizationRepository)
         {
-            organizations.Add(new Organization { Name = "enjoy.ing" });
-            organizations.Add(new Organization {  Name = "ATT" });
+            var organizations = new[]
+            {
+                new Organization { Name = "enjoy.ing" },
+                new Organization { Name = "ATT" }
+
+            };
+
+            AddBatch(organizationRepository, organizations);
+            
         }
 
-        private static void AddEmployees(ISqlRepository<Employee> employees)
+        private static void AddEmployees(ISqlRepository<Employee> employeeRepository)
         {
-            employees.Add(new Employee {  Name = "Marko" });
-            employees.Add(new Employee {  Name = "Katarina" });
-            employees.Add(new Employee {  Name = "Sofija" });
+            var employees = new[]
+            {
+                new Employee { Name = "Marko" },
+                new Employee { Name = "Katarina" },
+                new Employee { Name = "Katarina" }
+
+            };
+
+            AddBatch(employeeRepository, employees);
         }
+
+        private static void AddBatch<T>(ISqlRepository<T> repository, T[] items) where T:IEntityBase
+        {
+            foreach (var item in items)
+            {
+                repository.Add(item);
+            }
+            repository.Save();
+        }
+
+        
 
         private static void AddManager(ISqlWriteRepository<Manager> managers)
         {
@@ -99,7 +123,7 @@ namespace CoffeeAppGeneric
             simpleStack.Push("katarina");
             simpleStack.Push("sofija");
 
-            while (simpleStack.Count>0)
+            while (simpleStack.Count > 0)
             {
                 var item = simpleStack.Pop();
                 Console.WriteLine($"{item}");
