@@ -13,7 +13,6 @@ C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAp
 C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\ref\CoffeeAppGeneric.dll
 C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.pdb
 C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.genruntimeconfig.cache
-C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\obj\Debug\net5.0\CoffeeAppGeneric.csproj.AssemblyReference.cache
 C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Learning\Generic C#\CoffeAppGeneric\CoffeAppGeneric\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll

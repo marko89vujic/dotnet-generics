@@ -2,6 +2,7 @@
 using System;
 using CoffeeAppGeneric.Data;
 using CoffeeAppGeneric.Entities;
+using CoffeeAppGeneric.Extensions;
 using CoffeeAppGeneric.Repositories;
 
 namespace CoffeeAppGeneric
@@ -63,7 +64,7 @@ namespace CoffeeAppGeneric
 
             };
 
-            AddBatch(organizationRepository, organizations);
+            organizationRepository.AddBatch(organizations);
             
         }
 
@@ -77,17 +78,10 @@ namespace CoffeeAppGeneric
 
             };
 
-            AddBatch(employeeRepository, employees);
+            employeeRepository.AddBatch(employees);
         }
 
-        private static void AddBatch<T>(ISqlRepository<T> repository, T[] items) where T:IEntityBase
-        {
-            foreach (var item in items)
-            {
-                repository.Add(item);
-            }
-            repository.Save();
-        }
+        
 
         
 
